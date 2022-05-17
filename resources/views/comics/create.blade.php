@@ -1,16 +1,15 @@
 @extends ('layouts.main')
 
-@section('title', 'Comics')
+@section('title', 'Add new Comic')
 
 @section('main-content')
     <div class="container py-5">
         <div class="row">
-            <div class="row row-cols-4 g-4">
-                @foreach ($comics as $comic)
-                <div class="col">
+            <div class="row text-center">
+                <div class="col-12 d-flex align-items-center justify-content-center">
                     <div class="card">
-                        <div class="card-body">
-                            <img src="{{ $comic->thumb }}" alt="">
+                    <div class="card-body">
+                            <img src="{{ $comic['thumb'] }}" alt="">
                             <h5 class="card-title">
                                 {{ $comic->title }}
                                 <a href="{{ route('comics.show', $comic->id) }}">
@@ -29,7 +28,6 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
