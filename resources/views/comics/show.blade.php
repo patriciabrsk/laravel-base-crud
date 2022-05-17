@@ -1,4 +1,4 @@
-<!-- @extends ('layouts.main')
+@extends ('layouts.main')
 
 @section('title', 'Comic details')
 
@@ -8,15 +8,27 @@
             <div class="row text-center">
                 <div class="col-12 d-flex align-items-center justify-content-center">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $comic-> }} - {{ $comic-> }}</h5>
-                            <p class="card-text">{{ $comic-> }} {{ $comic-> }} - {{ $comic-> }} {{ $comic-> }}</p>
-                            <p class="card-text">{{ $comic-> }}</p>
-                            <p class="card-text">{{ $comic-> }}</p>
+                    <div class="card-body">
+                            <img src="{{ $comic['thumb'] }}" alt="">
+                            <h5 class="card-title">
+                                {{ $comic->title }}
+                                <a href="{{ route('comics.show', $comic->id) }}">
+                                    {{ $comic->id }}
+                                </a>
+                            </h5>
+                            <p class="card-text">
+                                {{ $comic-> description}} 
+                            </p>
+                            <p class="card-text">
+                                {{ $comic->price }} <span>- {{ $comic->series }}</span>
+                            </p>
+                            <p class="card-text">
+                                {{ $comic->sale_date }} <span>- {{ $comic->type }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-@endsection -->
+@endsection

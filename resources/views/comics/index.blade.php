@@ -10,27 +10,26 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
+                            <img src="{{ $comic->thumb }}" alt="">
                             <h5 class="card-title">
-                                <!-- <a href="{{ route('comics.show', $comic->id) }}">
-                                    {{ $comic-> }}
-                                </a> -->
+                                {{ $comic->title }}
+                                <a href="{{ route('comics.show', $comic->id) }}">
+                                    {{ $comic->id }}
+                                </a>
                             </h5>
                             <p class="card-text">
-                                {{ $comic-> }} 
-                                {{ $comic-> }} 
-                                - 
-                                {{ $comic-> }} 
-                                {{ $comic-> }}
+                                {{ $comic-> description}} 
                             </p>
-                            <p class="card-text">{{ $comic-> }}</p>
-                            <p class="card-text">{{ $comic-> }}</p>
+                            <p class="card-text">
+                                {{ $comic->price }} <span>- {{ $comic->series }}</span>
+                            </p>
+                            <p class="card-text">
+                                {{ $comic->sale_date }} <span>- {{ $comic->type }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <!-- @endforeach -->
-            </div>
-            <div class="col-12 py-5 d-flex justify-content-center">
-                {{ $comics->links() }}
             </div>
         </div>
     </div>
