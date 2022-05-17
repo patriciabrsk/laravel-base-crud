@@ -1,6 +1,6 @@
 @extends ('layouts.main')
 
-@section('title', 'Trains')
+@section('title', 'Comics')
 
 @section('main-content')
     <div class="container py-5">
@@ -11,9 +11,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">
-                                <a href="{{ route('trains.show', $train->id) }}">
+                                <!-- <a href="{{ route('comics.show', $comic->id) }}">
                                     {{ $comic-> }}
-                                </a>
+                                </a> -->
                             </h5>
                             <p class="card-text">
                                 {{ $comic-> }} 
@@ -30,7 +30,7 @@
                 <!-- @endforeach -->
             </div>
             <div class="col-12 py-5 d-flex justify-content-center">
-                {{ $trains->links() }}
+                {{ $comics->links() }}
             </div>
         </div>
     </div>
