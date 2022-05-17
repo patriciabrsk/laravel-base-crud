@@ -14,7 +14,7 @@ class ComicController extends Controller
             'comic' => new Comic(),
             'comics' => $comics
         ];
-        return view('trains.index', $data);
+        return view('comics.index', $data);
     }
 
     public function show($id) {
