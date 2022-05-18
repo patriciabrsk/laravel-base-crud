@@ -9,6 +9,8 @@
                 <div class="col-6 d-flex align-items-center justify-content-center">
                     
                 <form action="{{ route('comics.store') }}" method="post">
+                    @csrf
+                    
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" class="form-control" id="title" placeholder="Insert title">
