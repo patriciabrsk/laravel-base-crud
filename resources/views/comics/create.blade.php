@@ -10,7 +10,7 @@
                     
                 <form action="{{ route('comics.store') }}" method="post">
                     @csrf
-                    
+
                     <div class="form-group">
                         <label for="title">Title</label>
                         <input type="text" class="form-control" id="title" placeholder="Insert title">
@@ -23,7 +23,7 @@
 
                     <div class="form-group">
                         <label for="thumb">Thumb</label>
-                        <input type="text" class="form-control" id="thumb" placeholder="Insert img thumb">
+                        <input type="text" class="form-control" id="thumb" placeholder="Insert image url">
                     </div>
 
                     <div class="form-group">
